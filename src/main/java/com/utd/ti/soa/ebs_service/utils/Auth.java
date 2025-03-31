@@ -21,7 +21,7 @@ public class Auth {
     
             // Cambiar para obtener el 'username' de los claims
             String username = claims.get("username", String.class);
-            System.out.println("TTToken válido, usuario: " + username);
+            System.out.println("TToken válido, usuario: " + username);
     
             return true;
         } catch (Exception e) {

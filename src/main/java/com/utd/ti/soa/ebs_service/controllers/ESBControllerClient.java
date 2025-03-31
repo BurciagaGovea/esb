@@ -35,7 +35,7 @@ public class ESBControllerClient {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token inválidoo");
             }
 
-            System.out.println("Enviando solicitud a node Clients");
+            System.out.println("Enviando solicitud a node Clientss");
 
             String response = webClient.get()
                 .uri("/api/clients/clients")
