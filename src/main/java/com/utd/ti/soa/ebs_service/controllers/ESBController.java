@@ -70,6 +70,8 @@ public class ESBController {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token inválidooo");
             }
 
+            System.out.println("Enviando solicitud a node us");
+
             String response = webClient.get()
                 .uri("/api/users/all")
                 .retrieve()
@@ -79,7 +81,8 @@ public class ESBController {
         } catch (WebClientResponseException e) {
             return ResponseEntity.status(e.getStatusCode()).body(e.getResponseBodyAsString());
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error interno del servidor");
+            System.out.println(e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error interno del servidorr");
         }
     }
 
